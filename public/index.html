@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Todo App</h1>
+
+  <form id="todoForm">
+    <input type="text" id="title" placeholder="Title"/>
+    <select id="status">
+      <option value="">Choose status</option>
+      <option value="pending">Pending</option>
+      <option value="completed">Completed</option>
+      <option value="active">Active</option>
+    </select>
+    
+    <button type="submit">Add Todo</button>
+    <input type="text" id="description" placeholder="task description"/>
+  </form>
+
+  <div id="todoList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

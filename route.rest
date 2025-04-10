@@ -5,7 +5,8 @@ POST http://localhost:3000/todos
 Content-Type: application/json
 
 {
-  "title": "Learn REST API",
+  "title": "Learn REST",
+  "description": "Learn how to use REST APIs",
   "completed": false,
   "status": "active"
 }

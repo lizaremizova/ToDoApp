@@ -20,7 +20,8 @@ router.post('/', async (req, res) => {
     const todo = new Todo({
         title: req.body.title,
         completed: req.body.completed,
-        status: req.body.status
+        status: req.body.status,
+        description: req.body.description
     })
     try{
         const newTodo = await todo.save()
@@ -48,14 +49,14 @@ router.patch('/:id', getTodo, async (req, res) => {
 })
 
 router.delete('/:id', getTodo, async (req, res) => {
-    try{
-        await res.todo.remove()
-        res.json({ message: 'Deleted todo' })
+    try {
+        await Todo.deleteOne({ _id: req.params.id }); 
+        res.json({ message: 'Deleted todo' });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
     }
-    catch (err){
-        res.status(500).json({ message: err.message })
-    } 
-})
+});
+
 
 async function getTodo(req, res, next) {
     let todo

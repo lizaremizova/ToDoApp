@@ -20,8 +20,11 @@ mongoose.connect(process.env.DATABASE_URL, {
 
 
 app.use(express.json());
+app.use(express.static('public'));
 
 const todoRouter = require('./routes/todos');
 app.use('/todos', todoRouter);
 
 app.listen(3000, () => console.log('Server started on port 3000'));
+
+

@@ -6,7 +6,7 @@ Content-Type: application/json
 
 {
   "title": "Learn REST API",
-  "completed": false
+  "completed": false,
   "status": "active"
 }
 
@@ -17,3 +17,6 @@ Content-Type: application/json
 {
   "completed": true
 }   
+###
+
+DELETE http://localhost:3000/todos/67efb1a47f76c352ed3a13c
